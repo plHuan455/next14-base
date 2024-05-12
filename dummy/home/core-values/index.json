@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "thumbnail": "/images/core-values/creative.webp",
+      "title": "No Limit Creative",
+      "description": "Think out of the box, always seeking new ways to do things",
+      "color": "#2DD5FF"
+    },
+    {
+      "thumbnail": "/images/core-values/passionate.webp",
+      "title": "Work with Passionate",
+      "description": "We pour our hearts and souls into everything",
+      "color": "#FFD039"
+    },
+    {
+      "thumbnail": "/images/core-values/think-globally.webp",
+      "title": "Think Globally",
+      "description": "We respect cultural diversity while growing global gaming community",
+      "color": "#17DC7A"
+    }
+  ]
+}

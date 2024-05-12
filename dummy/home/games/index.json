@@ -1,0 +1,76 @@
+{
+  "games": [
+    {
+      "name": "Coco Park",
+      "logo": "/images/games/coco-park-logo.webp",
+      "thumbnail": "/images/games/coco-park.webp",
+      "description": "Coco Park is a story about a mysterious land, where many strange crocodiles live. As the responsibility of genetic evolution, the crocodiles will give birth to new generations of crocodiles with interesting shapes. As more crocodiles hatch, the more exciting things happen.",
+      "appStore": "https://qr.live/1L9zOc2",
+      "chPlay": "",
+      "zaloApp": ""
+    },
+    {
+      "name": "Len Bia",
+      "logo": "",
+      "thumbnail": "/images/games/beer.webp",
+      "description": "",
+      "appStore": "",
+      "chPlay": "",
+      "zaloApp": "https://qr.live/1L9zObT"
+    },
+    {
+      "name": "Vong Quay Nhan Pham",
+      "logo": "",
+      "thumbnail": "/images/games/vong-quay-nhanh-pham.webp",
+      "description": "",
+      "appStore": "",
+      "chPlay": "",
+      "zaloApp": "https://qr.live/1L9zObX"
+    },
+    {
+      "name": "Punchy Punchy 3D",
+      "logo": "",
+      "thumbnail": "/images/games/punchy-3d.webp",
+      "description": "",
+      "appStore": "",
+      "chPlay": "",
+      "zaloApp": ""
+    },
+    {
+      "name": "Giao Que",
+      "logo": "/images/games/giao-que.webp",
+      "thumbnail": "/images/games/gieo-que.webp",
+      "description": "",
+      "appStore": "",
+      "chPlay": "",
+      "zaloApp": "https://qr.live/1L9zObW"
+    },
+    {
+      "name": "Ninja Adventure",
+      "logo": "/images/games/ninja-adventure.webp",
+      "thumbnail": "/images/games/ninja-adventure.webp",
+      "description": "",
+      "appStore": "https://qr.live/1L9zOc1",
+      "chPlay": "https://qr.live/1L9zOc0",
+      "zaloApp": ""
+    },
+    {
+      "name": "True or Dare",
+      "logo": "",
+      "thumbnail": "/images/games/truth.webp",
+      "description": "",
+      "appStore": "",
+      "chPlay": "",
+      "zaloApp": "https://qr.live/1L9zObU"
+    },
+    {
+      "name": "Cuisine Park",
+      "logo": "",
+      "thumbnail": "/images/games/cuisine-park.webp",
+      "description": "",
+      "appStore": "https://qr.live/1L9zObY",
+      "chPlay": "https://qr.live/1L9zObZ",
+      "zaloApp": ""
+    }
+  ]
+}

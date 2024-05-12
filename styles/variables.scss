@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  // SIZE
+  $size-sm: 640px;
+  $size-md: 768px;
+  $size-lg: 1024px;
+  $size-xl: 1280px;
+  $size-2xl: 1536px;
+
+  // Z-INDEX
+  --zBase: 100;
+  --zPageLoadProgress: calc(var(--zBase) + 900);
+  --zDialog: calc(var(--zBase) + 30);
+  --zDialogOverlay: calc(var(--zDialog) - 2);
+  --zDropdown: calc(var(--zBase) + 20);
+  --zBackToTopButton: calc(var(--zBase) + 5);
+  --zHeader: var(--zBase);
+  --zSlideBottom: calc(var(--zBase) - 5);
+  --zContent: calc(var(--zBase) - 90);
+
+  // COLORS
+  // BASE ON NEXT UI: https://nextui.org/docs/customization/colors
+  // DEFAULT 500
+  --color-primary: 0 100% 64%;
+  --color-secondary: 46 100% 61%;
+  --color-foreground: 0 0% 0%;
+  --color-background: 0 0% 100%;
+  --color-default-50: 0 0% 98%;
+  --color-default-200: 240 6% 90%;
+  --color-default: 240 5% 65%;
+  --color-default-700: 240 5% 26%;
+  --color-default-800: 240 4% 16%;
+  --color-default-900: 240 6% 10%;
+
+  // SPACING
+  $size-sm: 640px;
+  $size-md: 768px;
+  $size-lg: 1024px;
+  $size-xl: 1280px;
+  $size-2xl: 1536px;
+
+  --default-header-height: 104px;
+  @media (max-width: $size-xl) {
+    --default-header-height: 80px;
+  }
+}

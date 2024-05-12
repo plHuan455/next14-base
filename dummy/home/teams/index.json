@@ -1,0 +1,14 @@
+{
+  "teams": [
+    { "name": "Long Dang", "position": "CEO", "color": "#FF3A5E", "avatar": "/images/teams/1.webp" },
+    { "name": "Huy Pham", "position": "Game Lead", "color": "#2DD5FF", "avatar": "/images/teams/2.webp" },
+    { "name": "Phuc Nguyen", "position": "Game Engineer", "color": "#FF8F34", "avatar": "/images/teams/3.webp" },
+    { "name": "Duc Tran", "position": "Game Engineer", "color": "#FF3B9C", "avatar": "/images/teams/4.webp" },
+    { "name": "Dat Nguyen", "position": "3D & Animator", "color": "#FF6838", "avatar": "/images/teams/5.webp" },
+    { "name": "Phat Hinh", "position": "2D Artists", "color": "#17DC7A", "avatar": "/images/teams/6.webp" },
+    { "name": "Anh Ha", "position": "PM", "color": "#FF4040", "avatar": "/images/teams/7.webp" },
+    { "name": "Huan Pham", "position": "FE", "color": "#676DFF", "avatar": "/images/teams/8.webp" },
+    { "name": "Phu Vong", "position": "FE", "color": "#AB58FF", "avatar": "/images/teams/9.webp" },
+    { "name": "Luan Nguyen", "position": "BE", "color": "#86C500", "avatar": "/images/teams/10.webp" }
+  ]
+}
