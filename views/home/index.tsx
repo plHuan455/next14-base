@@ -1,12 +1,6 @@
-interface ViewHomeProps {}
+import { getActors } from "services/api/video"
 
-const ViewHome: React.FC<ViewHomeProps> = () => {
-  // const t = useTranslations("Policy")
-  return (
-    <div>
-      home page
-    </div>
-  )
+export default async function ViewHome() {
+  const data = await getActors()
+  return <div>{JSON.stringify(data)}</div>
 }
-
-export default ViewHome

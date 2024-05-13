@@ -4,10 +4,6 @@ export const screenSizes = {
   lg: 1024,
   xl: 1280,
   "2xl": 1536,
-  mobile: 640,
-  tablet: 768,
-  desktop: 1280,
-  lowTablet: 481,
 }
 
 export const breakPoint = {

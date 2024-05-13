@@ -1,8 +1,7 @@
+import { LOCALES } from "constants/locale"
 import createMiddleware from "next-intl/middleware"
 
-
 import { pathnames } from "./i18n"
-import { LOCALES } from "constants/locale"
 
 export default createMiddleware({
   // Add locales you want in the app

@@ -1,6 +1,5 @@
-import { useTheme } from "next-themes"
-
 import { THEME_CONSTANT } from "constants/common"
+import { useTheme } from "next-themes"
 
 export type ThemeValueType = (typeof THEME_CONSTANT)[keyof typeof THEME_CONSTANT]
 

@@ -1,4 +1,3 @@
-
 export const IMAGE_ORIGIN = {
   cloud: "cloud",
   internal: "internal",

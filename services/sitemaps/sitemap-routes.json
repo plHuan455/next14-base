@@ -1,6 +1,0 @@
-{
-  "SITEMAP_ROOT_ROUTE": "/sitemap.xml",
-  "SITEMAP_ROUTES": {
-    "main": "/sitemap-index.xml"
-  }
-}

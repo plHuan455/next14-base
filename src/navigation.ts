@@ -1,6 +1,5 @@
+import { LOCALES } from "constants/locale"
 import { createLocalizedPathnamesNavigation } from "next-intl/navigation"
-
-import { LOCALES } from "constants/common"
 
 import { localePrefix, pathnames } from "./i18n"
 
