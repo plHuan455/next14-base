@@ -1,11 +1,11 @@
-import { APP_ENV } from "configs"
+import CONFIGS from "configs"
+import { TEXT_CONSTANTS } from "constants/common"
+import { IMAGE_SRC } from "constants/image"
+import { LOCALE_CONSTANTS } from "constants/locale"
 import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
-import { TEXT_CONSTANTS } from "constants/common"
 import { ValuesOf } from "types/index.d"
-import { LOCALE_CONSTANTS } from "constants/locale"
-import { IMAGE_SRC } from "constants/image"
 
 export interface MetadataProps {
   locale: ValuesOf<typeof LOCALE_CONSTANTS>
@@ -23,7 +23,7 @@ export const generatePageMetadata = async (props?: MetadataProps) => {
   const t = await getTranslations({ locale, namespace: "General.Metadata" })
 
   return {
-    metadataBase: new URL(APP_ENV.DOMAIN as string),
+    metadataBase: new URL(CONFIGS.DOMAIN as string),
     applicationName: TEXT_CONSTANTS.SITE_NAME,
     title: t("title"),
     description: description || t("description"),

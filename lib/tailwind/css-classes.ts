@@ -57,34 +57,9 @@ const scrollbarDefaultStyles = {
   },
 }
 
-const thumbnailStyles = {
-  ".video-thumb-overlay-btt": {
-    background: "linear-gradient(180deg, rgba(94, 94, 94, 0.1) 50%, rgba(4, 6, 28, 0.6) 100%)",
-  },
-}
-
-const scrollbarLivescore = {
-  ".scrollbar-livescore::-webkit-scrollbar": {
-    height: "10px",
-    marginRight: "2px",
-    width: "0px",
-  },
-  ".scrollbar-livescore::-webkit-scrollbar-thumb": {
-    background: "hsl(159.26deg 65.85% 51.76%)",
-    borderRadius: "8px",
-  },
-  ".scrollbar-livescore::-webkit-scrollbar-track": {
-    background: "hsl(0deg 0% 85.49%)",
-    borderRadius: "8px",
-  },
-}
-
 export const extraCSSClasses = {
   ...containerSizeStyles,
   ...scrollbarDefaultStyles,
-  ...scrollbarLivescore,
-  ...thumbnailStyles,
-
   ".webkit-box": {
     display: "-webkit-box",
   },
