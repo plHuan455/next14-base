@@ -1,10 +1,10 @@
 "use client"
 
 import { QUERY_KEY } from "@constants/query-key"
+import { useAtom } from "jotai"
 import { useQuery } from "react-query"
-import { useDispatch } from "react-redux"
 
-import { authActions } from "lib/redux/reducers/auth"
+import { authAtom } from "lib/jotai/atoms/auth"
 import { getMyShopServices } from "services/api/shop"
 
 interface Props {
@@ -12,14 +12,23 @@ interface Props {
 }
 
 export default function ProfileWrapper({ children }: Props) {
-  const dispatch = useDispatch()
+  const [_, setAuth] = useAtom(authAtom)
   useQuery({
     queryKey: [QUERY_KEY.SHOP.login],
     queryFn: getMyShopServices,
     onSuccess(data) {
-      dispatch(authActions.updateState({ shop: data.shop, isLogged: true, isLoading: false, token: data.token }))
+      setAuth({
+        isLoading: false,
+        isLogged: true,
+        shop: data.shop,
+        token: data.token,
+      })
     },
     onError() {
+      setAuth({
+        isLoading: false,
+        isLogged: false,
+      })
       alert("error")
     },
   })
