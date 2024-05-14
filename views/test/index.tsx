@@ -1,18 +1,19 @@
 "use client"
 
 import { ButtonBase } from "@comp/atoms/button-base"
-import { useAtom } from "jotai"
 
-import { authAtom } from "lib/jotai/atoms/auth"
+import { useAppDispatch } from "lib/redux/hooks"
+import { authActions, useAuthValue } from "lib/redux/reducers/auth"
 
 export default function ViewTest() {
-  const [auth, setAuth] = useAtom(authAtom)
+  const dispatch = useAppDispatch()
+  const auth = useAuthValue()
   return (
     <div>
       <ButtonBase
         size={40}
         onClick={() => {
-          setAuth({ token: "new token", isLoading: false, isLogged: true })
+          dispatch(authActions.updateState({ token: "new token", isLoading: false, isLogged: false }))
         }}
       >
         click me
