@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Header() {
   return (
-    <header className="fixed top-0 inset-x-0 h-[--dashboard-header-height] bg-default px-6">
+    <header className="fixed top-0 inset-x-0 h-[--dashboard-header-height] bg-content-1 px-6">
       <div className="flex items-center h-full justify-between">
         <div className="shrink-0">LOGO</div>
         <div className="min-w-0">

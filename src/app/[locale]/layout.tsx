@@ -1,6 +1,6 @@
-import JotaiProvider from "@comp/templates/jotai-provider"
 import ProfileWrapper from "@comp/templates/profile-wrapper"
 import ReduxStoreProvider from "@comp/templates/redux-store-provider"
+import ThemeProviderBase from "@comp/templates/theme-provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
 import { NextIntlClientProvider, useMessages } from "next-intl"
 
@@ -17,15 +17,15 @@ export default function RootLayout({ children, locale }: RootLayoutProps) {
   return (
     <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <QueryClientWrapper>
-            <JotaiProvider>
+        <ThemeProviderBase>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <QueryClientWrapper>
               <ReduxStoreProvider>
                 <ProfileWrapper>{children}</ProfileWrapper>
               </ReduxStoreProvider>
-            </JotaiProvider>
-          </QueryClientWrapper>
-        </NextIntlClientProvider>
+            </QueryClientWrapper>
+          </NextIntlClientProvider>
+        </ThemeProviderBase>
       </body>
     </html>
   )
