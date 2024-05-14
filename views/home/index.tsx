@@ -1,6 +1,12 @@
-import { getActors } from "services/api/video"
+"use client"
 
-export default async function ViewHome() {
-  const data = await getActors()
-  return <div>{JSON.stringify(data)}</div>
+import { useAuthValue } from "lib/redux/reducers/auth"
+
+export default function ViewHome() {
+  const auth = useAuthValue()
+  return (
+    <div>
+      <div>{JSON.stringify(auth)}</div>
+    </div>
+  )
 }

@@ -24,23 +24,16 @@
   // COLORS
   // BASE ON NEXT UI: https://nextui.org/docs/customization/colors
   // DEFAULT 500
-  --color-primary: 0 100% 64%;
+  --color-primary: 330 99% 49%;
   --color-secondary: 46 100% 61%;
-  --color-foreground: 0 0% 0%;
-  --color-background: 0 0% 100%;
+  --color-foreground: 0 0% 100%;
+  --color-background: 0 0% 0%;
   --color-default-50: 0 0% 98%;
   --color-default-200: 240 6% 90%;
-  --color-default: 240 5% 65%;
-  --color-default-700: 240 5% 26%;
+  --color-default: 0 0% 16%;
+  --color-default-700: 0 0% 10%;
   --color-default-800: 240 4% 16%;
-  --color-default-900: 240 6% 10%;
-
-  // SPACING
-  $size-sm: 640px;
-  $size-md: 768px;
-  $size-lg: 1024px;
-  $size-xl: 1280px;
-  $size-2xl: 1536px;
+  --color-default-900: 0 0% 0%;
 
   --default-header-height: 104px;
   @media (max-width: $size-xl) {

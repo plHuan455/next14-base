@@ -9,7 +9,7 @@ export default createMiddleware({
   localePrefix: "as-needed",
   pathnames: pathnames,
   // Default locale if no match
-  defaultLocale: "en",
+  defaultLocale: "vi",
   localeDetection: false,
 })
 

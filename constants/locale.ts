@@ -1,5 +1,5 @@
 export const LOCALE_CONSTANTS = {
   vi: "vi",
-  en: "en",
+  // en: "en",
 }
-export const LOCALES = [LOCALE_CONSTANTS.vi, LOCALE_CONSTANTS.en]
+export const LOCALES = [LOCALE_CONSTANTS.vi]

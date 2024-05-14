@@ -3,12 +3,14 @@ import { type VariantProps, tv } from "tailwind-variants"
 
 import { cn } from "lib/utils/cn"
 
+import LoadingDots from "../loading-dots"
+
 export const buttonBaseVariants = tv(
   {
     base: "a-button flex items-center justify-center [&:not(:disabled)]:active:opacity-[0.92] relative font-content rounded-full duration-200 whitespace-nowrap leading-normal active:scale-[0.98] disabled:active:scale-100",
     variants: {
       color: {
-        primary: "bg-primary hover:bg-primary/90 text-white",
+        primary: "bg-primary [&:not(:disabled)]:hover:bg-primary/90 text-white",
         secondary: "bg-secondary text-white",
         default: "bg-default",
         black: "bg-black hover:bg-default-700 text-white",
@@ -21,6 +23,13 @@ export const buttonBaseVariants = tv(
       variant: {
         text: "bg-transparent",
         default: "",
+      },
+      disabled: {
+        true: "opacity-70 !cursor-not-allowed",
+      },
+      isLoading: {
+        true: "",
+        false: "",
       },
       isIconOnly: {
         true: "aspect-square w-auto p-0",
@@ -52,23 +61,26 @@ export const buttonBaseVariants = tv(
 )
 
 export interface ButtonBaseProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "color">,
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "color" | "disabled">,
     VariantProps<typeof buttonBaseVariants> {
   as?: React.ElementType
 }
 
 const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>(
-  ({ className, as = "button", children, isIconOnly, variant, color, size, disabled, ...props }, ref) => {
+  ({ className, as = "button", children, isLoading, isIconOnly, variant, color, size, disabled, ...props }, ref) => {
     const Component = as
     return (
       <Component
-        className={cn(buttonBaseVariants({ size, color, variant, isIconOnly }), className)}
+        className={cn(
+          buttonBaseVariants({ size, color, variant, isIconOnly, disabled: disabled || isLoading }),
+          className,
+        )}
         ref={ref}
-        disabled={disabled}
+        disabled={disabled || isLoading}
         {...props}
       >
         {/* LABEL */}
-        {children}
+        {isLoading ? <LoadingDots className="text-white" /> : children}
       </Component>
     )
   },

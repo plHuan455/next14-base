@@ -24,9 +24,9 @@
       "@comp/*": ["./components/*"],
       "@views/*": ["./views/*"],
       "@api/*": ["./api/*"],
-      "@constants": ["./constants/*"],
-      "@layouts": ["./layouts"],
-      "@hooks": ["./hooks"]
+      "@constants/*": ["./constants/*"],
+      "@layouts/*": ["./layouts"],
+      "@hooks/*": ["./hooks"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "scripts/next/index.js"],

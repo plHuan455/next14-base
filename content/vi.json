@@ -1,9 +1,24 @@
 {
+  "ShopCreate": {
+    "title": "Tạo cửa hàng",
+    "create_button": "Tạo cửa hàng",
+    "field_shop_name": "Tên cửa hàng",
+    "field_username": "Tài khoản",
+    "field_password": "Mật khẩu",
+    "field_confirm_password": "Nhập lại mật khẩu"
+  },
+  "ShopLogin": {
+    "title": "Đăng nhập"
+  },
   "General": {
     "Metadata": {
       "title": "Carem · Make your Life more Exciting",
       "description": "Carem brings new colors into your life",
       "keywords": ""
+    },
+    "Errors": {
+      "confirm_password_not_match": "Mật khẩu xác nhận không khớp",
+      "field_required": "Trường này không được để trống"
     }
   }
 }
