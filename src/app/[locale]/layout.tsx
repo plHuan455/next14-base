@@ -1,3 +1,4 @@
+import JotaiProvider from "@comp/templates/jotai-provider"
 import ProfileWrapper from "@comp/templates/profile-wrapper"
 import ReduxStoreProvider from "@comp/templates/redux-store-provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
@@ -18,9 +19,11 @@ export default function RootLayout({ children, locale }: RootLayoutProps) {
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <QueryClientWrapper>
-            <ReduxStoreProvider>
-              <ProfileWrapper>{children}</ProfileWrapper>
-            </ReduxStoreProvider>
+            <JotaiProvider>
+              <ReduxStoreProvider>
+                <ProfileWrapper>{children}</ProfileWrapper>
+              </ReduxStoreProvider>
+            </JotaiProvider>
           </QueryClientWrapper>
         </NextIntlClientProvider>
       </body>

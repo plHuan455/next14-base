@@ -7,6 +7,11 @@ export const makeStore = () => {
     reducer: {
       auth: authReducer,
     },
+    middleware(getDefaultMiddleware) {
+      return getDefaultMiddleware({
+        serializableCheck: false,
+      })
+    },
   })
 }
 

@@ -16,6 +16,7 @@ export const extraColors = {
   default: {
     50: "hsl(var(--color-default-50))",
     200: "hsl(var(--color-default-200))",
+    400: "hsl(var(--color-default-400))",
     DEFAULT: "hsl(var(--color-default))",
     700: "hsl(var(--color-default-700))",
     800: "hsl(var(--color-default-800))",

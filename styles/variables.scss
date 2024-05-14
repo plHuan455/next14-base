@@ -30,13 +30,14 @@
   --color-background: 0 0% 0%;
   --color-default-50: 0 0% 98%;
   --color-default-200: 240 6% 90%;
+  --color-default-400: 0 0.54% 24.85%;
   --color-default: 0 0% 16%;
   --color-default-700: 0 0% 10%;
   --color-default-800: 240 4% 16%;
   --color-default-900: 0 0% 0%;
 
-  --default-header-height: 104px;
+  --dashboard-header-height: 72px;
   @media (max-width: $size-xl) {
-    --default-header-height: 80px;
+    --dashboard-header-height: 72px;
   }
 }

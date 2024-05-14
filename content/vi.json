@@ -7,6 +7,13 @@
     "field_password": "Mật khẩu",
     "field_confirm_password": "Nhập lại mật khẩu"
   },
+  "Dashboard": {
+    "SlideBar": {
+      "tab_overview": "Tổng quan",
+      "tab_create_page": "Tạo trang",
+      "tab_settings": "Cài đặt"
+    }
+  },
   "ShopLogin": {
     "title": "Đăng nhập"
   },
