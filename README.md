@@ -3,7 +3,9 @@ NEXTJS + Tailwindcss + GRPC
 
 
 ## BRANCHES
-- main
+- JOTAI
 `Jotai state management`
 - REDUX
 `redux state management`
+
+
