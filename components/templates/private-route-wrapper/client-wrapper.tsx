@@ -12,7 +12,7 @@ export default function ClientWrapper({ children }: Props) {
   const auth = useAuthValue()
   if (auth.isLoading) {
     return (
-      <div className="h-screen supports-[height:100dvh]:h-[100dvh] w-full flex items-center">
+      <div className="h-screen supports-[height:100dvh]:h-[100dvh] w-full flex items-center justify-center">
         <LoadingDots />
       </div>
     )
