@@ -10,8 +10,8 @@
   "Dashboard": {
     "SlideBar": {
       "tab_overview": "Tổng quan",
-      "tab_create_page": "Tạo trang",
-      "tab_settings": "Cài đặt"
+      "tab_products": "Danh sách sản phẩm",
+      "tab_invite": "Lời mời"
     }
   },
   "ShopLogin": {

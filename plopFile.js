@@ -1,58 +1,49 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs")
+const { transform } = require("@svgr/core")
+const SVG_FOLDER = "components/atoms/svg"
 
-const FILE_PATHS = {
-  vi: "content/vi.json",
-  en: "content/en.json",
-}
+const createSVGComp = ({ fileName }) => {
+  const toUpperCase = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+  }
 
-const updateFileValue = (path, { key, value }) => {
-  const fileData = JSON.parse(fs.readFileSync(path, "utf-8"))
-  const properties = key.split(".")
+  const fileData = fs.readFileSync(`${SVG_FOLDER}/${fileName}/index.svg`, "utf-8")
 
-  properties.reduce((curr, propertyKey, index) => {
-    const formatPropertyKey = propertyKey.trim().replace(/\s+/g, "_")
-    if (index === properties.length - 1) {
-      curr[formatPropertyKey] = value
-      return curr[formatPropertyKey]
-    } else {
-      if (curr[formatPropertyKey] === undefined) {
-        curr[formatPropertyKey] = {}
+  const componentName = fileName
+    .split("-")
+    .map((value) => toUpperCase(value))
+    .join("")
+  transform(fileData, { icon: true }, { componentName: "MyComponent" }).then((jsCode) => {
+    const result = `
+      import { SvgIconProps } from "../types"
+      export default function Icon${componentName} = (props: SvgIconProps) => {
+        return (
+          ${jsCode}
+        )
       }
-
-      return curr[formatPropertyKey]
-    }
-  }, fileData)
-
-  fs.writeFileSync(path, JSON.stringify(fileData, null, 2))
+      `
+      .replace(/(?<=<svg.*)>/i, " {...props} >")
+      .replace(/(\="#[0-9a-fA-F]+\")|(=\"white\")|(=\"black\")/g, '="currentColor"')
+    fs.writeFileSync(`${SVG_FOLDER}/${fileName}/index.tsx`, result)
+  })
 }
 
 module.exports = function (plop) {
-  plop.setGenerator("modify-vi-en-lang", {
-    description: "UPDATE vi & en language",
+  plop.setGenerator("GENERATE SVG", {
+    description: "UPDATE vi & dev language",
     prompts: [
       {
         type: "input",
-        name: "key", // key | key1.key2
-        message: "key",
-      },
-      {
-        type: "input",
-        name: "enValue",
-        message: "EN Value",
-      },
-      {
-        type: "input",
-        name: "viValue",
-        message: "Vi Value",
+        name: "fileName",
+        message: "File Name",
       },
     ],
     actions: [
       function (data) {
-        const { key, viValue, enValue } = data
-        updateFileValue(FILE_PATHS.vi, { key: key, value: viValue })
-        updateFileValue(FILE_PATHS.en, { key: key, value: enValue })
-        return "VI DEV LANGUAGE FILES HAS BEEN UPDATED!"
+        createSVGComp(data)
+        return "SVG COMPONENT HAS BEEN CREATED"
       },
     ],
   })

@@ -12,6 +12,8 @@ export const buttonBaseVariants = tv(
       color: {
         primary: "bg-primary [&:not(:disabled)]:hover:bg-primary/90 text-white",
         secondary: "bg-secondary text-white",
+        default_200: "bg-default-200 hover:bg-default-100",
+        default_300: "bg-default-300 hover:bg-default-200",
         default: "bg-default",
         black: "bg-black hover:bg-default-700 text-white",
       },
@@ -37,11 +39,6 @@ export const buttonBaseVariants = tv(
       },
     },
     compoundVariants: [
-      {
-        variant: "text",
-        color: "default",
-        className: "hover:bg-default-200",
-      },
       {
         variant: "text",
         color: "black",
