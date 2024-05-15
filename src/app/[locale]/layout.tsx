@@ -1,5 +1,3 @@
-import JotaiProvider from "@comp/templates/jotai-provider"
-import ProfileWrapper from "@comp/templates/profile-wrapper"
 import ThemeProviderBase from "@comp/templates/theme-provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
 import { NextIntlClientProvider, useMessages } from "next-intl"
@@ -19,11 +17,7 @@ export default function RootLayout({ children, locale }: RootLayoutProps) {
       <body>
         <ThemeProviderBase>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <QueryClientWrapper>
-              <JotaiProvider>
-                <ProfileWrapper>{children}</ProfileWrapper>
-              </JotaiProvider>
-            </QueryClientWrapper>
+            <QueryClientWrapper>{children}</QueryClientWrapper>
           </NextIntlClientProvider>
         </ThemeProviderBase>
       </body>
