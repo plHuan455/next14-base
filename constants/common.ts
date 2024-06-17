@@ -4,6 +4,6 @@ export const THEME_CONSTANT = {
 } as const
 
 export const TEXT_CONSTANTS = {
-  IMAGE_ALT: "Carem",
-  SITE_NAME: "Carem",
+  IMAGE_ALT: "Name",
+  SITE_NAME: "Name",
 }

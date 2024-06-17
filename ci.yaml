@@ -2,7 +2,7 @@ destinations:
 - auto_trigger_pipeline: true
   name: media/landingpages/sysops
   ref: main
-  service_name: carem
+  service_name: service_name
   service_type:
   - nextjs
   url: https://gitlab.ugaming.io/media/landingpages/sysops

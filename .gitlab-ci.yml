@@ -4,6 +4,6 @@ include:
   ref: $SCRIPT_VERSION
 
 variables:
-  SERVICE: "carem"                # (required)
+  SERVICE: "service_name"                # (required)
   # RELEASE_TYPE: "patch"           # (optional) default is "patch"
   # AUTO_RELEASE: "true"            # (optional) default is "true"
