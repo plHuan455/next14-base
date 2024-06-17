@@ -1,3 +1,4 @@
+import JotaiProvider from "@comp/templates/jotai-provider"
 import ThemeProviderBase from "@comp/templates/theme-provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
 import { NextIntlClientProvider, useMessages } from "next-intl"
@@ -17,7 +18,9 @@ export default function RootLayout({ children, locale }: RootLayoutProps) {
       <body>
         <ThemeProviderBase>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <QueryClientWrapper>{children}</QueryClientWrapper>
+            <QueryClientWrapper>
+              <JotaiProvider>{children}</JotaiProvider>
+            </QueryClientWrapper>
           </NextIntlClientProvider>
         </ThemeProviderBase>
       </body>
