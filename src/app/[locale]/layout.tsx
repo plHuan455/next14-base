@@ -14,7 +14,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children, locale }: RootLayoutProps) {
   const messages = useMessages()
   return (
-    <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`}>
+    <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`} suppressHydrationWarning>
       <body>
         <ThemeProviderBase>
           <NextIntlClientProvider locale={locale} messages={messages}>
