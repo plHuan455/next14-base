@@ -8,6 +8,7 @@ export const IMAGE_RESIZE_TOOL = {
   NEXTJS: "NEXTJS",
   CLOUDFLARE: "CLOUDFLARE",
   NONE: "NONE",
+  DISABLED: "DISABLED",
 }
 
 export const IMAGE_SRC = {

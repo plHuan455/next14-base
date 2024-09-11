@@ -1,6 +1,7 @@
 import CONFIGS from "configs"
 import { TEXT_CONSTANTS } from "constants/common"
 import { IMAGE_ORIGIN, IMAGE_RESIZE_TOOL } from "constants/image"
+import ENV_CONFIGS from "envs"
 import Image, { ImageProps } from "next/image"
 import { useCallback, useMemo } from "react"
 
@@ -34,6 +35,7 @@ const ImageBase: React.FC<ImageBaseProps> = ({
   origin,
   fill = true,
   priority = false,
+  unoptimized = true,
   resizeType = RESIZE_TYPE.GLOBAL_CONFIG,
   ...props
 }) => {
@@ -70,6 +72,20 @@ const ImageBase: React.FC<ImageBaseProps> = ({
         sizes="100vw"
         alt={alt}
         fill={fill}
+        unoptimized={
+          ENV_CONFIGS.RESIZE_IMAGE === IMAGE_RESIZE_TOOL.DISABLED
+            ? true
+            : ENV_CONFIGS.RESIZE_IMAGE === IMAGE_RESIZE_TOOL.NONE
+            ? unoptimized ?? true
+            : undefined
+        }
+        data-unoptimize={
+          ENV_CONFIGS.RESIZE_IMAGE === IMAGE_RESIZE_TOOL.DISABLED
+            ? true
+            : ENV_CONFIGS.RESIZE_IMAGE === IMAGE_RESIZE_TOOL.NONE
+            ? unoptimized ?? true
+            : undefined
+        }
         priority={priority}
         className={cn("object-cover", props.className)}
         loader={loader(detectedOrigin)}
