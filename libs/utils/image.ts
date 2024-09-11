@@ -8,7 +8,7 @@ export const IMAGE_ORIGIN = {
 
 export type ImageOriginTypes = (typeof IMAGE_ORIGIN)[keyof typeof IMAGE_ORIGIN]
 
-export const detectImageOrigin = (src: string): ImageOriginTypes => {
+export const detectImageOrigin = (src: string): ImageOriginTypes | undefined => {
   if (typeof src !== "string") return IMAGE_ORIGIN.external
   if (src.match(/^https*:\/\/.*/g)) return IMAGE_ORIGIN.external
   if (!src.startsWith("/")) return IMAGE_ORIGIN.cloud

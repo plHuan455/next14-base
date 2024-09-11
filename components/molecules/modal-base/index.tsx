@@ -1,8 +1,8 @@
+import { cn } from "libs/utils/cn"
 import ReactModal, { Props } from "react-modal"
 
 import { ButtonBase, ButtonBaseProps } from "components/atoms/button-base"
 import IconClose from "components/atoms/svg/close"
-import { cn } from "lib/utils/cn"
 
 export interface BaseModalProps extends Omit<Props, "className"> {
   contentClassName?: string

@@ -1,6 +1,5 @@
+import { cn } from "libs/utils/cn"
 import Link, { LinkProps } from "next/link"
-
-import { cn } from "lib/utils/cn"
 
 // type Props = (({
 //   href: string

@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 import { withTV } from "tailwind-variants/transformer"
 
-import { extraColors } from "./lib/tailwind/colors"
-import { extraCSSClasses } from "./lib/tailwind/css-classes"
-import { extraAnimations, extraKeyframes, screenSizes } from "./lib/tailwind/variables"
+import { extraColors } from "./libs/tailwind/colors"
+import { extraCSSClasses } from "./libs/tailwind/css-classes"
+import { extraAnimations, extraKeyframes, screenSizes } from "./libs/tailwind/variables"
 
 module.exports = withTV({
   darkMode: "class",

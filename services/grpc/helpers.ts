@@ -1,6 +1,5 @@
 import { ConnectError, Interceptor } from "@connectrpc/connect"
-
-import { isProduction } from "lib/utils/nextjs-utils"
+import { isProduction } from "libs/utils/nextjs"
 
 class Logger {
   private logDebug = (...params) => {

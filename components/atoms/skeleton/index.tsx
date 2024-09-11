@@ -1,7 +1,6 @@
+import { cn } from "libs/utils/cn"
 import { CSSProperties } from "react"
 import { type VariantProps, tv } from "tailwind-variants"
-
-import { cn } from "lib/utils/cn"
 
 const skeletonVariants = tv({
   base: "block skeleton-item",

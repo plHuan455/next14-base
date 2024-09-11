@@ -2,11 +2,10 @@ import CONFIGS from "configs"
 import { TEXT_CONSTANTS } from "constants/common"
 import { IMAGE_ORIGIN, IMAGE_RESIZE_TOOL } from "constants/image"
 import ENV_CONFIGS from "envs"
+import { cn } from "libs/utils/cn"
+import { ImageOriginTypes, detectImageOrigin, formatImageUrl, myImageLoader } from "libs/utils/image"
 import Image, { ImageProps } from "next/image"
 import { useCallback, useMemo } from "react"
-
-import { cn } from "lib/utils/cn"
-import { ImageOriginTypes, detectImageOrigin, formatImageUrl, myImageLoader } from "lib/utils/image-utils"
 
 export enum RESIZE_TYPE {
   GLOBAL_CONFIG = "global_config",
@@ -49,7 +48,7 @@ const ImageBase: React.FC<ImageBaseProps> = ({
   }, [origin, src])
 
   const loader = useCallback(
-    (origin: ImageOriginTypes) => {
+    (origin?: ImageOriginTypes) => {
       const resizeTool = mapResize(resizeType)
       if (resizeTool === IMAGE_RESIZE_TOOL.NONE) {
         return ({ src }) => src

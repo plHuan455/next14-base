@@ -9,8 +9,7 @@
  * 3. your initialState pass on useHydrateAtoms with replace initial state of your atom
  * */
 import { useHydrateAtoms } from "jotai/utils"
-
-import { authAtom, getAuthInitialState } from "lib/jotai/atoms/auth"
+import { authAtom, getAuthInitialState } from "libs/jotai/atoms/auth"
 
 interface Props {
   children: React.ReactNode

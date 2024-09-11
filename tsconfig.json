@@ -8,6 +8,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -26,7 +27,8 @@
       "@api/*": ["./api/*"],
       "@constants/*": ["./constants/*"],
       "@layouts/*": ["./layouts"],
-      "@hooks/*": ["./hooks"]
+      "@hooks/*": ["./hooks"],
+      "@libs/*": ["./libs/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "scripts/next/index.js"],

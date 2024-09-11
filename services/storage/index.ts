@@ -1,4 +1,4 @@
-import { isServer } from "lib/utils/nextjs-utils"
+import { isServer } from "libs/utils/nextjs"
 
 import { STORAGE_TOKEN_NAME } from "./constants"
 

@@ -3,9 +3,9 @@
 import { QUERY_KEY } from "@constants/query-key"
 import { deleteCookie } from "cookies-next"
 import { useAtom } from "jotai"
+import { authAtom } from "libs/jotai/atoms/auth"
 import { useQuery } from "react-query"
 
-import { authAtom } from "lib/jotai/atoms/auth"
 import { STORAGE_TOKEN_NAME } from "services/storage/constants"
 
 interface Props {

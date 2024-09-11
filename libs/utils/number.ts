@@ -28,7 +28,7 @@ export const abbreviateNumber = (num: number = 0, options?: { roundTo?: number }
   const numLen = String(num).length
   const additionData = additionStr.reverse().find((value) => value.numLen <= numLen)
 
-  if (!additionData.add) return String(num)
+  if (!additionData?.add) return String(num)
 
   return `${(num / Math.pow(10, additionData.numLen - 1)).toFixed(roundTo).replace(/\.0+$/g, "")}${additionData.add}`
 }
