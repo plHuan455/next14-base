@@ -1,26 +1,25 @@
-import JotaiProvider from "@comp/templates/jotai-provider"
-import ThemeProviderBase from "@comp/templates/theme-provider"
+import JotaiProvider from "@libs/jotai/provider"
+import ThemeProviderBase from "@libs/next-themes/provider"
+import QueryClientProvider from "@libs/react-query/provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
 import { NextIntlClientProvider, useMessages } from "next-intl"
-
-import QueryClientWrapper from "components/templates/query-client-wrapper"
 
 import "../../../styles/index.scss"
 
 interface RootLayoutProps {
   children: React.ReactNode
-  locale: never
+  params: { locale: string }
 }
-export default function RootLayout({ children, locale }: RootLayoutProps) {
+export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
   const messages = useMessages()
   return (
     <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`} suppressHydrationWarning>
       <body>
         <ThemeProviderBase>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <QueryClientWrapper>
+            <QueryClientProvider>
               <JotaiProvider>{children}</JotaiProvider>
-            </QueryClientWrapper>
+            </QueryClientProvider>
           </NextIntlClientProvider>
         </ThemeProviderBase>
       </body>
