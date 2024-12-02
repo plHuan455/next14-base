@@ -44,6 +44,9 @@ const createSVGComp = ({ fileName }) => {
     const result = str
       .replace(/(?<=<svg.*)>/i, " {...props} >")
       .replace(/(\="#[0-9a-fA-F]+\")|(=\"white\")|(=\"black\")/g, '="currentColor"')
+      .replace(/stroke-width/g, "strokeWidth")
+      .replace(/stroke-linecap/g, "strokeLinecap")
+      .replace(/stroke-linejoin/g, "strokeLinejoin")
     fs.writeFileSync(`${SVG_FOLDER}/${fileName}/index.tsx`, result)
 
     // EXPORT GLOBAL
