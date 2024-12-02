@@ -1,8 +1,8 @@
+import I18Provider from "@libs/i18/provider"
 import JotaiProvider from "@libs/jotai/provider"
 import ThemeProviderBase from "@libs/next-themes/provider"
 import QueryClientProvider from "@libs/react-query/provider"
 import { LOCALE_CONSTANTS } from "constants/locale"
-import { NextIntlClientProvider, useMessages } from "next-intl"
 
 import "../../../styles/index.scss"
 
@@ -11,16 +11,15 @@ interface RootLayoutProps {
   params: { locale: string }
 }
 export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-  const messages = useMessages()
   return (
     <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`} suppressHydrationWarning>
       <body>
         <ThemeProviderBase>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <I18Provider locale={locale}>
             <QueryClientProvider>
               <JotaiProvider>{children}</JotaiProvider>
             </QueryClientProvider>
-          </NextIntlClientProvider>
+          </I18Provider>
         </ThemeProviderBase>
       </body>
     </html>

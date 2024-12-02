@@ -1,9 +1,8 @@
 /* eslint-disable */
-const { withBundleAnalyzer } = require("./scripts/next/handle-analyzer")
 const withNextIntl = require("next-intl/plugin")()
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withNextIntl({
+const nextConfig = {
   eslint: {
     dirs: ["."],
   },
@@ -22,6 +21,6 @@ const nextConfig = withNextIntl({
   experimental: {
     webpackBuildWorker: true,
   },
-})
+}
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = withNextIntl(nextConfig)
