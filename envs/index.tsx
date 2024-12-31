@@ -1,4 +1,4 @@
-const ENV_CONFIGS = {
+const ENVS = {
   APP_ENV: process.env.NEXT_PUBLIC_APP_ENV,
   DOMAIN: process.env.NEXT_PUBLIC_DOMAIN,
   RESIZE_IMAGE: process.env.NEXT_PUBLIC_RESIZE_IMAGE, // NEXTJS | CLOUDFLARE | NONE
@@ -8,4 +8,4 @@ const ENV_CONFIGS = {
   GG_TAG: process.env.NEXT_PUBLIC_GOOGLE_TAG_KEY,
 }
 
-export default ENV_CONFIGS
+export default ENVS

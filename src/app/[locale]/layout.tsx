@@ -2,7 +2,6 @@ import I18Provider from "@libs/i18/provider"
 import JotaiProvider from "@libs/jotai/provider"
 import ThemeProviderBase from "@libs/next-themes/provider"
 import QueryClientProvider from "@libs/react-query/provider"
-import { LOCALE_CONSTANTS } from "constants/locale"
 
 import "../../../styles/index.scss"
 
@@ -12,7 +11,7 @@ interface RootLayoutProps {
 }
 export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
   return (
-    <html lang={locale || LOCALE_CONSTANTS.vi} className={`font-sans`} suppressHydrationWarning>
+    <html lang={locale} className={`font-sans`}>
       <body>
         <ThemeProviderBase>
           <I18Provider locale={locale}>
